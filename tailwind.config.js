@@ -2,6 +2,12 @@
 module.exports = {
   content: ['./src/pages/**/*.{ts,tsx}', './src/components/**/*.{ts,tsx}'],
   theme: {
+    container: {
+      center: true,
+    },
+    fontFamily: {
+      sans: ['Oswald', 'sans-serif'],
+    },
     extend: {},
   },
   plugins: [],

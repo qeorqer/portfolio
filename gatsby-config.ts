@@ -5,11 +5,20 @@ const config: GatsbyConfig = {
     title: `GeorgePustovit.dev`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
-  // If you use VSCode you can also use the GraphQL plugin
-  // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
-  plugins: ['gatsby-plugin-postcss'],
+  plugins: [
+    'gatsby-plugin-postcss',
+    'gatsby-plugin-dts-css-modules',
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Oswald\:300,400,700`,
+        ],
+        display: 'swap'
+      }
+    }
+  ],
 };
 
 export default config;

@@ -1,0 +1,52 @@
+.toggleButton {
+  cursor: pointer;
+  width: 30px;
+  height: 15px;
+  transition: 0.3s;
+}
+
+.toggleButton span {
+  transition: inherit;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 3px;
+  display: block;
+  position: relative;
+}
+
+.toggleButton span:after {
+  transition: inherit;
+  content: '';
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 3px;
+  display: block;
+  position: absolute;
+  top: 12px;
+}
+
+.toggleButton.active span {
+  transform: rotate(45deg);
+}
+
+.toggleButton.active span:after {
+  top: 0;
+  transform: rotate(-90deg);
+}
+
+@media (max-width: 768px) {
+  .mobileMenu {
+    transition: 0.3s;
+    position: absolute;
+    top: 55px;
+    right: 100%;
+    width: 100%;
+    text-align: right;
+  }
+
+  .mobileMenu.active {
+    right: 0;
+  }
+}

@@ -1,14 +1,16 @@
-import * as React from 'react';
+import React from 'react';
 import type { HeadFC } from 'gatsby';
+
+import Header from '../components/Header';
 
 const MainPage = () => {
   return (
     <main>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <Header />
     </main>
   );
 };
 
 export default MainPage;
 
-export const Head: HeadFC = () => <title>Home Page</title>;
+export const Head: HeadFC = () => <title>George Pustovit</title>;
