@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import React, { useState } from 'react';
 
-import Button from '../Button';
+import Button from '@components/Button';
 
 import { menuItems } from './utils';
 import * as styles from './style.module.css';
@@ -10,11 +10,11 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-gray-900 text-white py-4 text-center">
+    <header className="bg-gray-900 text-white py-4 text-center fixed w-full text-lg">
       <div className="container grid grid-cols-2 md:grid-cols-3 md:gap-4 font-light items-center px-5">
         <div>
           <Link to="/">
-            <h1>George Pustovit</h1>
+            <h1 className="text-emerald-500">George Pustovit</h1>
           </Link>
         </div>
         <div

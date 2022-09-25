@@ -1,12 +1,14 @@
 import React from 'react';
 import type { HeadFC } from 'gatsby';
 
-import Header from '../components/Header';
+import Header from '@components/Header';
+import Intro from '@components/Intro';
 
 const MainPage = () => {
   return (
     <main>
       <Header />
+      <Intro />
     </main>
   );
 };

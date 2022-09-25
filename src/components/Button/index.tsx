@@ -8,7 +8,7 @@ type propsType = {
 const Button: React.FC<propsType> = ({ text, onClick }) => (
   <button
     onClick={onClick}
-    className="border-yellow-400 px-3 py-1 border rounded-lg">
+    className="border-emerald-500 px-3 py-1 border rounded-lg capitalize text-lg">
     {text}
   </button>
 );
