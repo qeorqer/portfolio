@@ -13,7 +13,7 @@ const Intro: React.FC = () => {
         </p>
         <div className="relative top-[150px]">
           <button
-            className="border-emerald-500 border p-2.5 rounded-full"
+            className="border-emerald-500 border-2 p-2.5 rounded-full"
             onClick={() => navigate('#about')}>
             <ArrowIcon />
           </button>

@@ -25,12 +25,14 @@
     "gatsby-plugin-manifest": "^4.23.1",
     "gatsby-plugin-react-svg": "^3.1.0",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "react-vertical-timeline-component": "^3.5.2"
   },
   "devDependencies": {
     "@types/node": "^17.0.45",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
+    "@types/react-vertical-timeline-component": "^3.3.3",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
     "autoprefixer": "^10.4.8",

@@ -1,15 +1,36 @@
 import React from 'react';
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+
+import { workExperience } from './utils';
 
 const Experience: React.FC = () => {
   return (
     <section
       className="bg-gray-900 text-white py-4 text-center"
       id="experience">
-      <div className="container font-light h-screen flex flex-col py-40 md:px-20 lg:px-32 xl:px-44 2xl:px-52">
-        <div className="text-3xl font-bold text-left">
+      <div className="container font-light min-h-screen flex flex-col py-40 md:px-20 lg:px-32 xl:px-44 2xl:px-52">
+        <div className="text-3xl font-bold text-left mb-10">
           <h2 className="withLine left inline">Experience</h2>
         </div>
-        <p className="text-left mt-10">The cool story about me</p>
+        <VerticalTimeline>
+          {workExperience.map((job) => (
+            <VerticalTimelineElement
+              contentStyle={{ background: '#10b981', color: '#fff' }}
+              contentArrowStyle={{
+                borderRight: '7px solid  #10b981',
+              }}
+              date={job.date}
+              dateClassName="text-center"
+              iconStyle={{ background: '#10b981', color: '#fff' }}>
+              <p className="font-bold">{job.title}</p>
+              <p>{job.description}</p>
+            </VerticalTimelineElement>
+          ))}
+        </VerticalTimeline>
       </div>
     </section>
   );
