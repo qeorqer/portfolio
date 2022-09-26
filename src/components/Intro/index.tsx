@@ -1,17 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { navigate } from 'gatsby';
 
-import Button from '@components/Button';
+import ArrowIcon from '@assets/icons/arrow.svg';
 
 const Intro: React.FC = () => {
   return (
     <section className="bg-gray-900 text-white py-4 text-center">
       <div className="container font-light p-5 h-screen flex items-center justify-center text-2xl flex-col">
-        <h2>
+        <p>
           Hi, my name is George and I am exactly the web developer you have been
           looking for
-        </h2>
+        </p>
         <div className="relative top-[150px]">
-          <Button text="learn more" onClick={() => {}} />
+          <button
+            className="border-emerald-500 border p-2.5 rounded-full"
+            onClick={() => navigate('#about')}>
+            <ArrowIcon />
+          </button>
         </div>
       </div>
     </section>

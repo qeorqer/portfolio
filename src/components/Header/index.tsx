@@ -10,7 +10,7 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-gray-900 text-white py-4 text-center fixed w-full text-lg">
+    <header className="bg-gray-900 text-white py-4 text-center fixed w-full text-lg z-10">
       <div className="container grid grid-cols-2 md:grid-cols-3 md:gap-4 font-light items-center px-5">
         <div>
           <Link to="/">

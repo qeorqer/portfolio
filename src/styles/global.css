@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.withLine {
+  position: relative;
+}
+
+.withLine::after {
+  content: '';
+  width: 60%;
+  height: 3px;
+  background-color: #10b981;
+  position: absolute;
+  bottom: -5px;
+}
+
+.withLine.left::after {
+  content: '';
+  left: 0;
+}
+
+.withLine.right::after {
+  content: '';
+  right: 0;
+}
