@@ -36,6 +36,19 @@
   transform: rotate(-90deg);
 }
 
+.nav ul {
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .nav ul {
+    display: flex;
+  }
+  .nav li.currentLink {
+    background-color: var(--green);
+  }
+}
+
 @media (max-width: 767px) {
   .mobileMenu {
     transition: 0.3s;

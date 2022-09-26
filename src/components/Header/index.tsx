@@ -1,5 +1,6 @@
 import { Link } from 'gatsby';
 import React, { useState } from 'react';
+import Scrollspy from 'react-scrollspy';
 
 import Button from '@components/Button';
 
@@ -28,14 +29,16 @@ const Header: React.FC = () => {
           className={`p-5 md:p-0 bg-gray-900 md:bg-transparent md:col-span-2 md:grid md:grid-cols-2 md:gap-4 items-center ${
             styles.mobileMenu
           } ${isMenuOpen && styles.active}`}>
-          <nav>
-            <ul className="md:flex justify-between">
+          <nav className={styles.nav}>
+            <Scrollspy
+              items={menuItems.map((item) => item.name.toLowerCase())}
+              currentClassName={styles.currentLink}>
               {menuItems.map((menuItem) => (
-                <li key={menuItem.name}>
+                <li key={menuItem.name} className="relative lg:flex-1">
                   <Link to={menuItem.link}>{menuItem.name}</Link>
                 </li>
               ))}
-            </ul>
+            </Scrollspy>
           </nav>
           <div>
             <Button text="Contact Me" onClick={() => console.log(123)} />
