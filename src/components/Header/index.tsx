@@ -34,7 +34,9 @@ const Header: React.FC = () => {
               items={menuItems.map((item) => item.name.toLowerCase())}
               currentClassName={styles.currentLink}>
               {menuItems.map((menuItem) => (
-                <li key={menuItem.name} className="relative lg:flex-1">
+                <li
+                  key={menuItem.name}
+                  className="relative lg:flex-1 transition duration-300">
                   <Link to={menuItem.link}>{menuItem.name}</Link>
                 </li>
               ))}
