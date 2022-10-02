@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: '15px',
+      padding: '25px',
     },
     fontFamily: {
       sans: ['Oswald', 'sans-serif'],

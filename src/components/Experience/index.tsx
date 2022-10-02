@@ -10,9 +10,10 @@ import { workExperience } from './utils';
 const Experience: React.FC = () => {
   return (
     <section
-      className="bg-gray-900 text-white py-4 text-center"
-      id="experience">
-      <div className="container font-light min-h-screen flex flex-col py-40 md:px-20 lg:px-32 xl:px-44 2xl:px-52">
+      className="bg-gray-900 text-white text-center font-light"
+      id="experience"
+    >
+      <div className="container min-h-screen flex flex-col pt-40 md:px-20 lg:px-32 xl:px-44 2xl:px-52">
         <div className="text-3xl font-bold text-left mb-10">
           <h2 className="withLine left inline">Experience</h2>
         </div>
@@ -25,7 +26,9 @@ const Experience: React.FC = () => {
               }}
               date={job.date}
               dateClassName="text-center"
-              iconStyle={{ background: '#10b981', color: '#fff' }}>
+              iconStyle={{ background: '#10b981', color: '#fff' }}
+              key={job.title}
+            >
               <p className="font-bold">{job.title}</p>
               <p>{job.description}</p>
             </VerticalTimelineElement>

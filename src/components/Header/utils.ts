@@ -15,4 +15,4 @@ export const menuItems = [
     name: 'Contacts',
     link: '#contacts',
   },
-]
+];

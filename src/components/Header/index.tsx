@@ -11,8 +11,8 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-gray-900 text-white py-4 text-center fixed w-full text-lg z-10">
-      <div className="container grid grid-cols-2 md:grid-cols-3 md:gap-4 font-light items-center px-5">
+    <header className="bg-gray-900 text-white py-4 text-center fixed w-full text-lg z-10 font-ligh  px-5">
+      <div className="container grid grid-cols-2 md:grid-cols-3 md:gap-4 items-center">
         <div>
           <Link to="/">
             <h1 className="text-emerald-500">George Pustovit</h1>
@@ -22,21 +22,25 @@ const Header: React.FC = () => {
           className={`${styles.toggleButton} block md:hidden justify-self-end ${
             isMenuOpen && styles.active
           }`}
-          onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
           <span></span>
         </div>
         <div
           className={`p-5 md:p-0 bg-gray-900 md:bg-transparent md:col-span-2 md:grid md:grid-cols-2 md:gap-4 items-center ${
             styles.mobileMenu
-          } ${isMenuOpen && styles.active}`}>
+          } ${isMenuOpen && styles.active}`}
+        >
           <nav className={styles.nav}>
             <Scrollspy
               items={menuItems.map((item) => item.name.toLowerCase())}
-              currentClassName={styles.currentLink}>
+              currentClassName={styles.currentLink}
+            >
               {menuItems.map((menuItem) => (
                 <li
                   key={menuItem.name}
-                  className="relative lg:flex-1 transition duration-300">
+                  className="relative lg:flex-1 transition duration-300"
+                >
                   <Link to={menuItem.link}>{menuItem.name}</Link>
                 </li>
               ))}

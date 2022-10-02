@@ -1,0 +1,7 @@
+.socials svg.fill:hover {
+  fill: var(--green);
+}
+
+.socials svg.stoke:hover {
+  stroke: var(--green);
+}

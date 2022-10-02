@@ -20,5 +20,8 @@
     },
     "[xml]": {
       "editor.defaultFormatter": "DotJoshJohnson.xml"
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
 }
