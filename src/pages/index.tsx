@@ -9,19 +9,17 @@ import Projects from '@components/Projects';
 import Contacts from '@components/Contacts';
 import Footer from '@components/Footer';
 
-const MainPage = () => {
-  return (
-    <main className="bg-gray-900">
-      <Header />
-      <Intro />
-      <About />
-      <Experience />
-      <Projects />
-      <Contacts />
-      <Footer />
-    </main>
-  );
-};
+const MainPage = () => (
+  <main className="bg-gray-900">
+    <Header />
+    <Intro />
+    <About />
+    <Experience />
+    <Projects />
+    <Contacts />
+    <Footer />
+  </main>
+);
 
 export default MainPage;
 
