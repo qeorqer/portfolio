@@ -15,6 +15,7 @@ const Intro: React.FC = () => {
           <button
             className="border-emerald-500 border-2 p-2.5 rounded-full"
             onClick={() => navigate('#about')}
+            type="button"
           >
             <ArrowIcon />
           </button>

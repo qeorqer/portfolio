@@ -36,12 +36,12 @@ const Projects: React.FC = () => {
               spaceBetween: 50,
             },
           }}
-          navigation={true}
           modules={[Navigation]}
+          navigation
         >
           {projects.map((project) => (
             <SwiperSlide key={project.title} className={styles.slide}>
-              <img src={project.preview.default} alt="project image" />
+              <img src={project.preview.default} alt="project" />
             </SwiperSlide>
           ))}
         </Swiper>

@@ -18,14 +18,15 @@ const Header: React.FC = () => {
             <h1 className="text-emerald-500">George Pustovit</h1>
           </Link>
         </div>
-        <div
+        <button
           className={`${styles.toggleButton} block md:hidden justify-self-end ${
             isMenuOpen && styles.active
           }`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
+          type="button"
         >
-          <span></span>
-        </div>
+          <span />
+        </button>
         <div
           className={`p-5 md:p-0 bg-gray-900 md:bg-transparent md:col-span-2 md:grid md:grid-cols-2 md:gap-4 items-center ${
             styles.mobileMenu

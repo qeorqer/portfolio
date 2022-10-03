@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { socials } from './utils';
 import * as styles from './style.module.css';
@@ -12,6 +12,7 @@ const Footer: React.FC = () => (
           target="_blank"
           key={social.link}
           className="mx-2"
+          rel="noreferrer"
         >
           <social.icon
             width={24}

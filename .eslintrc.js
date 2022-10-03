@@ -9,6 +9,7 @@ module.exports = {
     'prettier',
     'prettier/prettier',
     'plugin:prettier/recommended',
+    'plugin:import/typescript',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -19,6 +20,14 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react', 'react-hooks', '@typescript-eslint'],
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        moduleDirectory: ['node_modules', 'src/'],
+      },
+    },
+  },
   rules: {
     '@typescript-eslint/no-use-before-define': ['warn'],
     'react/jsx-filename-extension': [
@@ -43,15 +52,10 @@ module.exports = {
         allowExpressions: true,
       },
     ],
-    'max-len': [
-      'warn',
-      {
-        code: 80,
-      },
-    ],
+    'max-len': 'off',
     'react-hooks/rules-of-hooks': 'warn',
     'react-hooks/exhaustive-deps': 'warn',
-    'import/prefer-default-export': 'warn',
+    'import/prefer-default-export': 'off',
     'react/function-component-definition': [
       2,
       {
@@ -61,5 +65,9 @@ module.exports = {
     'react/prop-types': 'off',
     'no-param-reassign': 'off',
     'no-underscore-dangle': 'off',
+    'no-use-before-define': 'off',
+    'click-events-have-key-events': 'off',
+    'import/no-unresolved': 'off',
+    'global-require': 'off',
   },
 };
