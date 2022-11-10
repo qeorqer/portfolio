@@ -11,6 +11,14 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background: rgb(17, 24, 39);
+}
+
+main {
+  transition: 0.3s;
+}
+
 .withLine {
   position: relative;
 }

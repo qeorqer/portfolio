@@ -4,3 +4,4 @@ export const active: string;
 export const nav: string;
 export const currentLink: string;
 export const mobileMenu: string;
+export const menuOpen: string;

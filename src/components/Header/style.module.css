@@ -1,39 +1,48 @@
 .toggleButton {
   cursor: pointer;
   width: 30px;
-  height: 15px;
-  transition: 0.3s;
-}
-
-.toggleButton span {
-  transition: inherit;
-  width: 30px;
-  height: 3px;
-  background-color: #fff;
-  border-radius: 3px;
-  display: block;
+  height: 19px;
   position: relative;
 }
 
-.toggleButton span:after {
-  transition: inherit;
-  content: '';
+.toggleButton span {
   width: 30px;
   height: 3px;
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 3px;
   display: block;
   position: absolute;
-  top: 12px;
+  top: 0;
 }
 
-.toggleButton.active span {
+.toggleButton span:nth-child(1),
+.toggleButton span:nth-child(3) {
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out 0.4s;
+}
+
+.toggleButton span:nth-child(2) {
+  transition: transform 0.1s ease-in-out 0.3s;
+  top: 10px;
+}
+
+.toggleButton span:nth-child(3) {
+  top: 20px;
+}
+
+.toggleButton.active span:nth-child(1) {
+  transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.4s;
+  top: 10px;
   transform: rotate(45deg);
 }
 
-.toggleButton.active span:after {
-  top: 0;
-  transform: rotate(-90deg);
+.toggleButton.active span:nth-child(2) {
+  transform: scale(0);
+}
+
+.toggleButton.active span:nth-child(3) {
+  transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.4s;
+  top: 10px;
+  transform: rotate(-45deg);
 }
 
 .nav ul {
@@ -44,22 +53,107 @@
   .nav ul {
     display: flex;
   }
-  .nav li.currentLink {
+
+  .nav li {
+    margin: 0 5px;
+  }
+
+  .nav li a::after {
+    content: '';
+    width: 80%;
+    position: absolute;
+    height: 2px;
     background-color: var(--green);
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: scaleX(0);
+    transition: 0.3s transform ease-in;
+  }
+
+  .nav li span {
+    display: block;
+    transition: 0.3s transform ease-in;
+  }
+
+  .nav li.currentLink a::after,
+  .nav li:hover a::after,
+  .nav li:focus a::after {
+    transform: scale(1);
+  }
+
+  .nav li.currentLink a,
+  .nav li:hover a,
+  .nav li:focus a {
+    color: var(--green);
+  }
+
+  .nav li.currentLink span,
+  .nav li:hover span,
+  .nav li:focus span {
+    transform: translateY(-3px);
   }
 }
 
 @media (max-width: 767px) {
+  .nav li.currentLink a {
+    color: var(--green);
+  }
+
   .mobileMenu {
-    transition: 0.3s;
+    transition: 0.5s;
     position: absolute;
-    top: 55px;
-    right: 100%;
-    width: 100%;
-    text-align: left;
+    top: 60px;
+    right: -200%;
+    width: min(65vw, 250px);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mobileMenu > * {
+    transform: translateY(-60px);
+  }
+
+  .mobileMenu li,
+  .mobileMenu button {
+    transform: translateY(5px);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition-delay: 0.4s;
+    opacity: 0;
+  }
+
+  .mobileMenu li:nth-child(2) {
+    transition-delay: 0.5s;
+  }
+
+  .mobileMenu li:nth-child(3) {
+    transition-delay: 0.6s;
+  }
+
+  .mobileMenu li:nth-child(4) {
+    transition-delay: 0.7s;
+  }
+
+  .mobileMenu.active button {
+    transition-delay: 0.8s;
+  }
+
+  .mobileMenu.active li,
+  .mobileMenu.active button {
+    transform: translateY(0);
+    opacity: 1;
   }
 
   .mobileMenu.active {
     right: 0;
+  }
+
+  .menuOpen + main {
+    filter: blur(5px) brightness(0.7);
+    overflow: hidden;
   }
 }

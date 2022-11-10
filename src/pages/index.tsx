@@ -10,15 +10,17 @@ import Contacts from '@components/Contacts';
 import Footer from '@components/Footer';
 
 const MainPage = () => (
-  <main className="bg-gray-900">
+  <>
     <Header />
-    <Intro />
-    <About />
-    <Experience />
-    <Projects />
-    <Contacts />
+    <main>
+      <Intro />
+      <About />
+      <Experience />
+      <Projects />
+      <Contacts />
+    </main>
     <Footer />
-  </main>
+  </>
 );
 
 export default MainPage;
