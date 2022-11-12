@@ -4,9 +4,37 @@
   background-position: 100%;
   background-size: 250%;
   min-width: 100px;
+  position: relative;
+  overflow: hidden;
 }
+/* 
+.button::before {
+  content: '';
+  background-color: var(--green);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  transition: transform 0.3s ease-in-out;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(135deg) scaleY(0);
+  width: 100%;
+} */
 
 .button:hover,
 .button:focus {
   background-position: 0;
+  box-shadow: 0 0 15px 0 var(--green);
+  border-color: var(--white);
 }
+/* 
+.button:hover::before {
+  transform: translate(-50%, -50%) rotate(135deg) scaleY(3.5);
+}
+
+.button:active::before {
+  transform: translate(-50%, -50%) rotate(135deg) scaleY(10);
+} */

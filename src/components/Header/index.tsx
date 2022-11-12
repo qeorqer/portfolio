@@ -9,10 +9,10 @@ import * as styles from './style.module.css';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const toggleRef = useRef(null);
-  const menuRef = useRef(null);
+  const toggleRef: any = useRef(null);
+  const menuRef: any = useRef(null);
 
-  const closeOpenMenus = (e) => {
+  const closeOpenMenus = (e: any): void => {
     if (
       toggleRef.current &&
       isMenuOpen &&
@@ -50,7 +50,7 @@ const Header: React.FC = () => {
       }`}
     >
       <div className="container grid grid-cols-2 md:grid-cols-3 md:gap-4 items-center">
-        <div>
+        <div className={styles.logo}>
           <Link to="/">
             <h1 className="text-emerald-500">George Pustovit</h1>
           </Link>
@@ -95,7 +95,11 @@ const Header: React.FC = () => {
             </Scrollspy>
           </nav>
           <div>
-            <Button text="Contact Me" onClick={handleContactMePress} />
+            <Button
+              text="Contact Me"
+              onClick={handleContactMePress}
+              customStyles={styles.contactButton}
+            />
           </div>
         </div>
       </div>
