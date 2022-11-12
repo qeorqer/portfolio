@@ -77,6 +77,7 @@ const Header: React.FC = () => {
             <Scrollspy
               items={menuItems.map((item) => item.name.toLowerCase())}
               currentClassName={styles.currentLink}
+              offset={0}
             >
               {menuItems.map((menuItem) => (
                 <li

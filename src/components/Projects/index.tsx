@@ -15,7 +15,9 @@ const Projects: React.FC = () => {
         id="projects"
       >
         <div className="text-3xl font-bold text-right mb-10">
-          <h2 className="withLine right inline">Projects</h2>
+          <h2 className="withLine right inline" data-aos="fade-up">
+            Projects
+          </h2>
         </div>
         <p className="text-xl">Some of my recent works</p>
         <Swiper

@@ -15,7 +15,9 @@ const Experience: React.FC = () => {
     >
       <div className="container min-h-screen flex flex-col pt-40 md:px-20 lg:px-32 xl:px-44 2xl:px-52">
         <div className="text-3xl font-bold text-left mb-10">
-          <h2 className="withLine left inline">Experience</h2>
+          <h2 className="withLine left inline" data-aos="fade-up">
+            Experience
+          </h2>
         </div>
         <VerticalTimeline>
           {workExperience.map((job) => (

@@ -14,9 +14,11 @@ const Contacts: React.FC = () => {
         id="contacts"
       >
         <div className="text-3xl font-bold text-left mb-10">
-          <h2 className="withLine left inline">Contact</h2>
+          <h2 className="withLine left inline" data-aos="fade-up">
+            Contact
+          </h2>
         </div>
-        <form className="flex flex-col items-center">
+        <form className="flex flex-col items-center" data-aos="fade-up">
           <Input
             placeholder="Name"
             type="text"
