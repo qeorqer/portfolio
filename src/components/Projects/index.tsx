@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ProjectCard from '@components/Card';
+import ProjectCard from '@components/ProjectCard';
 
 import { projects } from './utils';
 
@@ -16,8 +16,13 @@ const Projects: React.FC = () => {
             Projects
           </h2>
         </div>
-        <p className="text-2xl text-emerald-500">Some things I built</p>
-        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5 text-left">
+        <p className="text-2xl text-emerald-500" data-aos="fade">
+          Some things I’ve built
+        </p>
+        <ul
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5 text-left"
+          data-aos="fade-up"
+        >
           {projects.map((project) => (
             <ProjectCard key={project.title} projectCard={project} />
           ))}

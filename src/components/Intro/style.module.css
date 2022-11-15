@@ -8,8 +8,6 @@
 .button {
   animation: button 0.7s ease-out 1.5s forwards,
     buttonDown 0.5s ease-out 2.3s forwards;
-  transition: box-shadow 0.5s ease-in-out;
-  box-shadow: 0 0 15px 5px transparent;
   border: 0;
   opacity: 0;
   position: relative;
@@ -17,11 +15,13 @@
   box-shadow: none;
   padding: 12px;
   top: 145px;
+  overflow: visible;
+  transition: box-shadow 0.5s ease-in-out;
+  box-shadow: 0 0 15px transparent;
 }
 
 .button:hover {
   box-shadow: 0 0 15px var(--green);
-  text-shadow: 0 0 15px var(--green);
 }
 
 .button::before,
