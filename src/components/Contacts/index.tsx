@@ -1,6 +1,4 @@
 import React from 'react';
-import 'swiper/css';
-import 'swiper/css/navigation';
 
 import Button from '@components/Button';
 import Input from '@components/Input';

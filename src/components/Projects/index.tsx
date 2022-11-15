@@ -1,11 +1,8 @@
 import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper';
-import 'swiper/css';
-import 'swiper/css/navigation';
+
+import ProjectCard from '@components/Card';
 
 import { projects } from './utils';
-import * as styles from './style.module.css';
 
 const Projects: React.FC = () => {
   return (
@@ -19,34 +16,12 @@ const Projects: React.FC = () => {
             Projects
           </h2>
         </div>
-        <p className="text-xl">Some of my recent works</p>
-        <Swiper
-          slidesPerView={3}
-          spaceBetween={30}
-          className="w-full mt-10"
-          breakpoints={{
-            450: {
-              slidesPerView: 2,
-              spaceBetween: 30,
-            },
-            768: {
-              slidesPerView: 3,
-              spaceBetween: 40,
-            },
-            1200: {
-              slidesPerView: 4,
-              spaceBetween: 50,
-            },
-          }}
-          modules={[Navigation]}
-          navigation
-        >
+        <p className="text-2xl text-emerald-500">Some things I built</p>
+        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5 text-left">
           {projects.map((project) => (
-            <SwiperSlide key={project.title} className={styles.slide}>
-              <img src={project.preview.default} alt="project" />
-            </SwiperSlide>
+            <ProjectCard key={project.title} projectCard={project} />
           ))}
-        </Swiper>
+        </ul>
       </div>
     </section>
   );
