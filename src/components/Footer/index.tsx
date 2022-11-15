@@ -7,7 +7,7 @@ const Footer: React.FC = () => (
   <footer
     className="bg-gray-900 text-white pb-4 text-center h-[70px]"
     data-aos="fade"
-    data-aos-offset="-100"
+    data-aos-offset="-200"
   >
     <div className={`flex mx-auto justify-center mb-2 ${styles.socials}`}>
       {socials.map((social) => (
