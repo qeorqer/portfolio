@@ -55,6 +55,7 @@
   }
 
   .logo {
+    opacity: 0;
     animation: fadeDown 0.5s ease-in-out forwards 0.1s;
   }
 
