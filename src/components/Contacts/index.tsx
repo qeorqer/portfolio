@@ -1,10 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Button from '@components/Button';
 import Input from '@components/Input';
 import Textarea from '@components/Textarea';
 
 const Contacts: React.FC = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [text, setText] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (name && email && text) {
+      try {
+        await fetch(process.env.CONTACT_FORM_GCF_URL!, {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            email,
+            name,
+            text,
+          }),
+        });
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  };
+
   return (
     <section className="bg-gray-900 text-white text-center min-h-[calc(100vg - 70px)] font-light">
       <div
@@ -21,17 +48,26 @@ const Contacts: React.FC = () => {
             placeholder="Name"
             type="text"
             className="mb-5 w-full max-w-md"
+            value={name}
+            setValue={setName}
+            required
           />
           <Input
             placeholder="Email"
             type="email"
             className="mb-5 w-full max-w-md"
+            value={email}
+            setValue={setEmail}
+            required
           />
           <Textarea
             placeholder="Your message"
             className="mb-5 w-full max-w-md min-h-[150px]"
+            value={text}
+            setValue={setText}
+            required
           />
-          <Button text="Submit" onClick={() => {}} />
+          <Button text="Submit" onClick={handleSubmit} type="submit" />
         </form>
       </div>
     </section>
