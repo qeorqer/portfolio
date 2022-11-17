@@ -49,6 +49,14 @@
   justify-content: space-between;
 }
 
+.headerTransparent {
+  background-color: transparent;
+}
+
+.darkHeader {
+  background-color: var(--dark);
+}
+
 @media (min-width: 768px) {
   .nav ul {
     display: flex;

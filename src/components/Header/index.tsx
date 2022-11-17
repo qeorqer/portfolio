@@ -9,6 +9,8 @@ import * as styles from './style.module.css';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isHeaderTransparent, setIsHeaderTransparent] = useState(true);
+
   const toggleRef: any = useRef(null);
   const menuRef: any = useRef(null);
 
@@ -33,19 +35,35 @@ const Header: React.FC = () => {
     setIsMenuOpen(false);
   };
 
+  const handleChangeBackground = () => {
+    if (window.scrollY >= 300) {
+      setIsHeaderTransparent(false);
+    } else {
+      setIsHeaderTransparent(true);
+    }
+  };
+
   useEffect(() => {
     if (isMenuOpen) {
+      setIsHeaderTransparent(false);
       document.body.style.overflow = 'hidden';
     } else {
+      handleChangeBackground();
       document.body.style.overflow = 'unset';
     }
 
     document.addEventListener('mousedown', closeOpenMenus);
   }, [isMenuOpen]);
 
+  useEffect(() => {
+    window.addEventListener('scroll', handleChangeBackground);
+  });
+
   return (
     <header
-      className={`bg-gray-900 text-white py-4 text-center fixed w-full text-lg font-ligh z-10 px-5 ${
+      className={`${
+        isHeaderTransparent ? styles.headerTransparent : styles.darkHeader
+      } text-white py-4 text-center fixed w-full text-lg font-ligh z-10 px-5 transition-color duration-500 ease-out ${
         isMenuOpen ? styles.menuOpen : ''
       }`}
     >
