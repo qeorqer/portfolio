@@ -9,11 +9,11 @@ import { workExperience } from './utils';
 
 const Experience: React.FC = () => {
   return (
-    <section
-      className="bg-gray-900 text-white text-center font-light"
-      id="experience"
-    >
-      <div className="container flex flex-col py-16 md:py-20 lg:py-24 md:px-20 lg:px-32 xl:px-44 2xl:px-52">
+    <section className="bg-gray-900 text-white text-center font-light">
+      <div
+        className="container flex flex-col pt-16 md:pt-20 lg:pt-24 md:px-20 lg:px-32 xl:px-44 2xl:px-52"
+        id="experience"
+      >
         <div className="text-3xl font-bold text-left mb-10">
           <h2 className="withLine left inline" data-aos="fade-up">
             Experience

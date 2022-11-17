@@ -65,3 +65,10 @@ main {
     transition-delay: 0s !important;
   }
 }
+
+:target[id]:before {
+  display: block;
+  position: relative;
+  top: 1000px;
+  visibility: hidden;
+}
