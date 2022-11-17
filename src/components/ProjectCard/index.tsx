@@ -19,7 +19,7 @@ type propsType = {
 
 const ProjectCard: React.FC<propsType> = ({ projectCard, order }) => (
   <li
-    className={`${styles.card} bg-gray-800 rounded py-8 px-7 hover:-translate-y-3 transition-transform duration-500 ease-in-out cursor-pointer relative`}
+    className={`${styles.card} bg-gray-800 rounded py-8 px-7 cursor-pointer relative`}
     data-aos="custom-fade-down"
     data-aos-delay={order * 100}
   >

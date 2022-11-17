@@ -74,7 +74,7 @@ const Contacts: React.FC = () => {
           </h2>
         </div>
         <form
-          className="flex flex-col items-center rela"
+          className="flex flex-col items-center"
           data-aos="fade-up"
           onSubmit={(e) => e.preventDefault()}
         >

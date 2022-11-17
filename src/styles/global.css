@@ -51,9 +51,11 @@ main {
 /* custom animations */
 [data-aos='custom-fade-down'] {
   opacity: 0;
-  transition-property: opacity, transform;
+  transform: translateY(-30px);
+  transition-property: transform, opacity;
 }
 
 [data-aos='custom-fade-down'].aos-animate {
   opacity: 1;
+  transform: translateY(0);
 }

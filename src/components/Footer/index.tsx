@@ -4,19 +4,18 @@ import { socials } from './utils';
 import * as styles from './style.module.css';
 
 const Footer: React.FC = () => (
-  <footer
-    className="bg-gray-900 text-white pb-4 text-center h-[70px]"
-    data-aos="fade"
-    data-aos-offset="-200"
-  >
+  <footer className="bg-gray-900 text-white pb-4 text-center h-[70px]">
     <div className={`flex mx-auto justify-center mb-2 ${styles.socials}`}>
-      {socials.map((social) => (
+      {socials.map((social, index) => (
         <a
           href={social.link}
           target="_blank"
           key={social.link}
           className="mx-2"
           rel="noreferrer"
+          data-aos="custom-fade-down"
+          data-aos-offset="-300"
+          data-aos-delay={(index + 1) * 100 + 100}
         >
           <social.icon
             width={24}
@@ -29,7 +28,14 @@ const Footer: React.FC = () => (
         </a>
       ))}
     </div>
-    <p className="text-sm">George Pustovit © {new Date().getFullYear()}</p>
+    <p
+      className="text-sm"
+      data-aos="fade"
+      data-aos-offset="-300"
+      data-aos-delay={socials.length * 100 + 200}
+    >
+      George Pustovit © {new Date().getFullYear()}
+    </p>
   </footer>
 );
 
