@@ -57,7 +57,7 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', handleChangeBackground);
-  });
+  }, []);
 
   return (
     <header
