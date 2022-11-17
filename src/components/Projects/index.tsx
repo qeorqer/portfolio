@@ -19,12 +19,13 @@ const Projects: React.FC = () => {
         <p className="text-2xl text-emerald-500" data-aos="fade">
           Some things I’ve built
         </p>
-        <ul
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5 text-left"
-          data-aos="fade-up"
-        >
-          {projects.map((project) => (
-            <ProjectCard key={project.title} projectCard={project} />
+        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5 text-left">
+          {projects.map((project, index) => (
+            <ProjectCard
+              key={project.title}
+              projectCard={project}
+              order={index + 1}
+            />
           ))}
         </ul>
       </div>

@@ -47,3 +47,13 @@ main {
 .vertical-timeline * {
   transition-duration: 1s !important;
 }
+
+/* custom animations */
+[data-aos='custom-fade-down'] {
+  opacity: 0;
+  transition-property: opacity, transform;
+}
+
+[data-aos='custom-fade-down'].aos-animate {
+  opacity: 1;
+}

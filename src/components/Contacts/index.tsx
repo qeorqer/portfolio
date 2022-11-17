@@ -14,6 +14,11 @@ const Contacts: React.FC = () => {
   const [isTextValid, setIsTextValid] = useState(true);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
+  const validateEmail = (mail: string): boolean => {
+    const re = /\S+@\S+\.\S+/;
+    return re.test(mail);
+  };
+
   const highlightField = (setter: Dispatch<SetStateAction<boolean>>): void => {
     setter(false);
     setTimeout(() => {
@@ -24,7 +29,7 @@ const Contacts: React.FC = () => {
   const handleSubmit = () => {
     if (!name) {
       highlightField(setIsNameValid);
-    } else if (!email) {
+    } else if (!email || !validateEmail(email)) {
       highlightField(setIsEmailValid);
     } else if (!text) {
       highlightField(setIsTextValid);
