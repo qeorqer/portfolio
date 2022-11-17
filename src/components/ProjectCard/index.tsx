@@ -14,14 +14,12 @@ type propsType = {
     url: string;
     repositoryUrl?: string;
   };
-  order: number;
 };
 
-const ProjectCard: React.FC<propsType> = ({ projectCard, order }) => (
+const ProjectCard: React.FC<propsType> = ({ projectCard }) => (
   <li
-    className={`${styles.card} bg-gray-800 rounded py-8 px-7 cursor-pointer relative`}
+    className={`${styles.card} bg-gray-800 rounded py-8 px-7 cursor-pointer duration-500 hover:-translate-y-3`}
     data-aos="custom-fade-down"
-    data-aos-delay={order * 100}
   >
     <div className="flex justify-between mb-3 items-center">
       <div className={styles.folder}>
