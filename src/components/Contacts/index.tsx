@@ -1,4 +1,5 @@
 import React, { Dispatch, SetStateAction, useState } from 'react';
+import { toast } from 'react-toastify';
 
 import Button from '@components/Button';
 import Input from '@components/Input';
@@ -47,9 +48,10 @@ const Contacts: React.FC = () => {
           setName('');
           setEmail('');
           setText('');
+
+          toast.success('Form submitted successfully!');
         });
       } catch (err) {
-        console.log(err);
         setIsButtonDisabled(false);
       }
     }
@@ -67,7 +69,7 @@ const Contacts: React.FC = () => {
           </h2>
         </div>
         <form
-          className="flex flex-col items-center"
+          className="flex flex-col items-center rela"
           data-aos="fade-up"
           onSubmit={(e) => e.preventDefault()}
         >
@@ -100,6 +102,7 @@ const Contacts: React.FC = () => {
             type="submit"
             disabled={isButtonDisabled}
           />
+          {/* <Loader /> */}
         </form>
       </div>
     </section>

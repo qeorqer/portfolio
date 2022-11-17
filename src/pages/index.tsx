@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import type { HeadFC } from 'gatsby';
 import AOS from 'aos';
+import { Slide, ToastContainer } from 'react-toastify';
 import 'aos/dist/aos.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 import Header from '@components/Header';
 import Intro from '@components/Intro';
@@ -31,6 +33,20 @@ const MainPage = () => {
         <Contacts />
       </main>
       <Footer />
+      <ToastContainer
+        position="bottom-center"
+        autoClose={2000}
+        limit={1}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss={false}
+        draggable
+        pauseOnHover
+        theme="dark"
+        transition={Slide}
+      />
     </>
   );
 };
