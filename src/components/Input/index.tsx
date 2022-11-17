@@ -1,10 +1,13 @@
 import React, { Dispatch, SetStateAction } from 'react';
 
+import * as styles from './style.module.css';
+
 type propsType = {
   placeholder: string;
   type: 'text' | 'email';
   value: string;
   setValue: Dispatch<SetStateAction<string>>;
+  isValid?: boolean;
   className?: string;
   required?: boolean;
 };
@@ -16,11 +19,12 @@ const Input: React.FC<propsType> = ({
   setValue,
   className,
   required,
+  isValid,
 }) => (
   <input
     type={type}
     placeholder={placeholder}
-    className={`py-1.5 px-2.5 rounded mb-5 border-2 transition transition-300 text-black hover:border-emerald-500 active:border-emerald-500 focus:border-emerald-500 ${className}`}
+    className={[styles.input, className, !isValid && styles.error].join(' ')}
     required={required}
     value={value}
     onChange={(e) => setValue(e.target.value)}
@@ -30,6 +34,7 @@ const Input: React.FC<propsType> = ({
 Input.defaultProps = {
   className: '',
   required: false,
+  isValid: true,
 };
 
 export default Input;

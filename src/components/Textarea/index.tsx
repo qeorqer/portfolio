@@ -1,23 +1,27 @@
 import React, { Dispatch, SetStateAction } from 'react';
 
+import * as styles from './style.module.css';
+
 type propsType = {
   placeholder: string;
   value: string;
   setValue: Dispatch<SetStateAction<string>>;
   className?: string;
   required?: boolean;
+  isValid?: boolean;
 };
 
 const Textarea: React.FC<propsType> = ({
   placeholder,
   className,
   required,
+  isValid,
   value,
   setValue,
 }) => (
   <textarea
     placeholder={placeholder}
-    className={`py-1.5 px-2.5 rounded mb-5 border-2 transition transition-300 text-black hover:border-emerald-500 active:border-emerald-500 focus:border-emerald-500 ${className}`}
+    className={[styles.input, className, !isValid && styles.error].join(' ')}
     required={required}
     value={value}
     onChange={(e) => setValue(e.target.value)}
@@ -27,6 +31,7 @@ const Textarea: React.FC<propsType> = ({
 Textarea.defaultProps = {
   className: '',
   required: false,
+  isValid: true,
 };
 
 export default Textarea;

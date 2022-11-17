@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Dispatch, SetStateAction, useState } from 'react';
 
 import Button from '@components/Button';
 import Input from '@components/Input';
@@ -8,13 +8,30 @@ const Contacts: React.FC = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [text, setText] = useState('');
+  const [isNameValid, setIsNameValid] = useState(true);
+  const [isEmailValid, setIsEmailValid] = useState(true);
+  const [isTextValid, setIsTextValid] = useState(true);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const highlightField = (setter: Dispatch<SetStateAction<boolean>>): void => {
+    setter(false);
+    setTimeout(() => {
+      setter(true);
+    }, 1000);
+  };
 
-    if (name && email && text) {
+  const handleSubmit = () => {
+    if (!name) {
+      highlightField(setIsNameValid);
+    } else if (!email) {
+      highlightField(setIsEmailValid);
+    } else if (!text) {
+      highlightField(setIsTextValid);
+    } else {
       try {
-        await fetch(process.env.CONTACT_FORM_GCF_URL!, {
+        setIsButtonDisabled(true);
+
+        fetch(process.env.CONTACT_FORM_GCF_URL!, {
           method: 'POST',
           headers: {
             Accept: 'application/json',
@@ -25,9 +42,15 @@ const Contacts: React.FC = () => {
             name,
             text,
           }),
+        }).then(() => {
+          setIsButtonDisabled(false);
+          setName('');
+          setEmail('');
+          setText('');
         });
       } catch (err) {
         console.log(err);
+        setIsButtonDisabled(false);
       }
     }
   };
@@ -43,31 +66,40 @@ const Contacts: React.FC = () => {
             Contact
           </h2>
         </div>
-        <form className="flex flex-col items-center" data-aos="fade-up">
+        <form
+          className="flex flex-col items-center"
+          data-aos="fade-up"
+          onSubmit={(e) => e.preventDefault()}
+        >
           <Input
-            placeholder="Name"
+            placeholder="Name*"
             type="text"
-            className="mb-5 w-full max-w-md"
+            className="mb-5"
             value={name}
             setValue={setName}
-            required
+            isValid={isNameValid}
           />
           <Input
-            placeholder="Email"
+            placeholder="Email*"
             type="email"
-            className="mb-5 w-full max-w-md"
+            className="mb-5"
             value={email}
             setValue={setEmail}
-            required
+            isValid={isEmailValid}
           />
           <Textarea
-            placeholder="Your message"
+            placeholder="Your message*"
             className="mb-5 w-full max-w-md min-h-[150px]"
             value={text}
             setValue={setText}
-            required
+            isValid={isTextValid}
           />
-          <Button text="Submit" onClick={handleSubmit} type="submit" />
+          <Button
+            text="Submit"
+            onClick={handleSubmit}
+            type="submit"
+            disabled={isButtonDisabled}
+          />
         </form>
       </div>
     </section>
