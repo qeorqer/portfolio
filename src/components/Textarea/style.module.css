@@ -1,0 +1,22 @@
+.input {
+  padding: 7px 12px;
+  border-radius: 0.25rem;
+  max-width: 450px;
+  width: 100%;
+  color: var(--black);
+  border: 3px solid transparent;
+  outline: none;
+  transition: border-color 0.5s ease-in-out, box-shadow 1s ease-out;
+  position: relative;
+  box-shadow: 0 0 15px 5px transparent;
+}
+
+.input.error {
+  box-shadow: 0 0 15px 12px var(--red);
+  border-color: transparent;
+}
+
+.input:hover,
+.input:focus {
+  border-color: var(--green);
+}
