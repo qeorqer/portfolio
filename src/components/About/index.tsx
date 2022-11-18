@@ -21,7 +21,7 @@ const About: React.FC = () => {
         <p className="text-left mt-10 max-w-xl" data-aos="fade">
           For the years spent in this field I had a lot of different experience.
           I worked with a bunch of small businesses as a freelance developer,
-          participated in creating of the huge learning platform, worked in
+          participated in creating of a huge learning platform, worked in
           outsource and outstaff companies, worked in a startup where I had to
           deal with all stages of development and much more. So I have a solid
           understanding what the business needs from programmers, and will be
