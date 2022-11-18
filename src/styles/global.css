@@ -12,10 +12,12 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   background: rgb(17, 24, 39);
+  overflow-x: hidden;
 }
 
 main {

@@ -46,10 +46,10 @@ const Header: React.FC = () => {
   useEffect(() => {
     if (isMenuOpen) {
       setIsHeaderTransparent(false);
-      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflowY = 'hidden';
     } else {
       handleChangeBackground();
-      document.body.style.overflow = 'unset';
+      document.documentElement.style.overflowY = 'unset';
     }
 
     document.addEventListener('mousedown', closeOpenMenus);

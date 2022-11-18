@@ -31,7 +31,7 @@ const Footer: React.FC = () => (
     <p
       className="text-sm"
       data-aos="fade"
-      data-aos-offset="-300"
+      data-aos-offset="-320"
       data-aos-delay={socials.length * 100 + 200}
     >
       George Pustovit © {new Date().getFullYear()}
