@@ -18,15 +18,20 @@ export const drawCanvas = (canvas: HTMLCanvasElement): void => {
   }
 
   window.addEventListener('resize', () => {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    if (
+      canvas.height !== window.innerHeight ||
+      canvas.width !== window.innerWidth
+    ) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    canvas.height = window.innerHeight;
-    canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      canvas.width = window.innerWidth;
 
-    columns = canvas.width / fontSize;
-    drops = [];
-    for (let x = 0; x < columns; x += 1) {
-      drops[x] = 1;
+      columns = canvas.width / fontSize;
+      drops = [];
+      for (let x = 0; x < columns; x += 1) {
+        drops[x] = 1;
+      }
     }
   });
 
