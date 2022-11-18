@@ -5,7 +5,7 @@ export const drawCanvas = (canvas: HTMLCanvasElement): void => {
     return;
   }
 
-  canvas.height = window.innerHeight;
+  canvas.height = window.screen.height;
   canvas.width = window.innerWidth;
 
   const values = ['1', '0'];
