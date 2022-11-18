@@ -20,7 +20,7 @@ export const workExperience = [
   {
     title: 'Freelance developer',
     description:
-      'Worked with a large number of clients as a freelance developer. Engaged in various work on the web,  mostly dealing with tasks related to CMS(especially with Wordpress), creating websites markup, writing scripts using js and php. Helped a lot of people to level up their business.',
+      'Worked with a large number of clients as a freelance developer. Engaged in various work on the web,  mostly dealing with tasks related to CMS(Wordpress especially), creating websites markup, writing scripts using js and php. Helped a lot of people to level up their businesses.',
     date: '04.2019 - 06.2021',
   },
 ];

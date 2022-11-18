@@ -17,7 +17,7 @@ export const projects = [
   {
     title: 'Billionstracker',
     description:
-      "Haven't found the app for budget tracking I like so I created my own. Working on it im my free time, I'm going to add PWA version in the future and, who knows, maybe even will try to attract users.",
+      "Haven't found the app for budget tracking I like so I created my own. Working on it in my free time, going to add PWA version in the future and, maybe even will try to attract users.",
     technologies: ['React', 'Express', 'Typescript', 'Heroku'],
     url: 'https://qeorqer.github.io/billionstraker-fe/',
     repositoryUrl: 'https://github.com/qeorqer/billionstraker-fe',
@@ -25,14 +25,14 @@ export const projects = [
   {
     title: 'Estone.pro',
     description:
-      'Created a Wordpress based site for the construction materials delivery company. Also, I was managing it for a few years and adding some new features',
+      'Created a Wordpress based site for the construction materials delivery company. Also, I was managing it  and adding some new features for a few years',
     technologies: ['Wordpress', 'PHP', 'Javascript'],
     url: 'https://estone.pro/',
   },
   {
     title: 'speedating.kiev.ua',
     description:
-      'Managing and adding new feature to the dating site built with Wordpress.',
+      'Managing and adding new features to the dating site built with Wordpress.',
     technologies: ['Wordpress', 'Javascript'],
     url: 'https://speedating.kiev.ua/',
   },
