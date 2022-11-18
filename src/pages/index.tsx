@@ -14,6 +14,8 @@ import Contacts from '@components/Contacts';
 import Footer from '@components/Footer';
 
 const MainPage = () => {
+  console.log(process.env);
+
   useEffect(() => {
     AOS.init({
       once: true,

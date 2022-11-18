@@ -19,7 +19,7 @@ export const drawCanvas = (canvas: HTMLCanvasElement): void => {
 
   window.addEventListener('resize', () => {
     if (canvas.width !== window.innerWidth) {
-      canvas.height = window.innerHeight;
+      canvas.height = window.screen.height;
       canvas.width = window.innerWidth;
 
       columns = canvas.width / fontSize;
