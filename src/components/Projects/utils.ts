@@ -2,51 +2,44 @@ export const projects = [
   {
     title: 'Nection',
     description:
-      'Working in a small team on creating the application for people who want to learn anything new or teach someone.',
-    preview: require('@assets/images/weshare.png'),
-    technologies: ['React', 'Express', 'Typescript'],
-    url: 'https://app.weshare.net/',
-    repositoryUrl: 'https://github.com/qeorqer',
+      'Nection is a personal CRM that takes networking to the next level. The app is available on both IOS and Android, highly recommend to check in out.',
+    technologies: ['React Native', 'Express', 'AWS'],
+    url: 'https://nection.io/',
   },
   {
     title: 'Weshare',
     description:
-      'Working in a small team on creating the application for people who want to learn anything new or teach someone.',
+      'Educational web app where people can share their knowledge as well as learn something new. Created with the help of React on client side and Express.js on server side.',
     preview: require('@assets/images/weshare.png'),
     technologies: ['React', 'Express', 'Typescript'],
     url: 'https://app.weshare.net/',
-  },
-  {
-    title: 'Estone.pro',
-    description:
-      'Working in a small team on creating the application for people who want to learn anything new or teach someone.',
-    preview: require('@assets/images/weshare.png'),
-    technologies: ['React', 'Express', 'Typescript'],
-    url: 'https://app.weshare.net/',
-    repositoryUrl: 'https://github.com/qeorqer',
   },
   {
     title: 'Billionstracker',
     description:
-      'Working in a small team on creating the application for people who want to learn anything new or teach someone.',
-    preview: require('@assets/images/weshare.png'),
-    technologies: ['React', 'Express', 'Typescript'],
-    url: 'https://app.weshare.net/',
+      "Haven't found the app for budget tracking I like so I created my own. Working on it im my free time, I'm going to add PWA version in the future and, who knows, maybe even will try to attract users.",
+    technologies: ['React', 'Express', 'Typescript', 'Heroku'],
+    url: 'https://qeorqer.github.io/billionstraker-fe/',
+    repositoryUrl: 'https://github.com/qeorqer/billionstraker-fe',
+  },
+  {
+    title: 'Estone.pro',
+    description:
+      'Created a Wordpress based site for the construction materials delivery company. Also, I was managing it for a few years and adding some new features',
+    technologies: ['Wordpress', 'PHP', 'Javascript'],
+    url: 'https://estone.pro/',
   },
   {
     title: 'speedating.kiev.ua',
     description:
-      'Working in a small team on creating the application for people who want to learn anything new or teach someone.',
-    preview: require('@assets/images/weshare.png'),
-    technologies: ['React', 'Express', 'Typescript'],
+      'Managing and adding new feature to the dating site built with Wordpress.',
+    technologies: ['Wordpress', 'Javascript'],
     url: 'https://speedating.kiev.ua/',
   },
   {
     title: 'Anderidagroup',
-    description:
-      'Working in a small team on creating the application for people who want to learn anything new or teach someone.',
-    preview: require('@assets/images/weshare.png'),
-    technologies: ['React', 'Express', 'Typescript'],
-    url: 'https://app.weshare.net/',
+    description: 'Built a site for the financial company. Based on wordpress',
+    technologies: ['PHP', 'Javascript', 'Wordpress'],
+    url: 'https://anderidagroup.com/',
   },
 ];

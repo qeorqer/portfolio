@@ -1,3 +1,13 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.card p {
+  flex: 1;
+}
+
 .card:hover h3 {
   color: var(--green);
 }

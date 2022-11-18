@@ -11,11 +11,12 @@ const About: React.FC = () => {
         </div>
         <p className="text-left mt-10 max-w-xl" data-aos="fade">
           I am a third generation developer(yep, even my grandma used to code)
-          from Ukraine who is passionate about his job. I enjoy solving business
-          problems with the help of programming and, especially, I love to
-          create the things that live in the web. I positionate myself as a full
-          stack developer who can create front end, back end and deal with the
-          databases as well as servers.
+          from Ukraine with bachalor degree in computer science who is
+          passionate about his job. I enjoy solving business problems with the
+          help of programming and, especially, I love to create the things that
+          live in the web. I positionate myself as a full stack developer who
+          can create front end, back end and deal with the databases as well as
+          servers.
         </p>
         <p className="text-left mt-10 max-w-xl" data-aos="fade">
           For the years spent in this field I had a lot of different experience.

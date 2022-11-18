@@ -46,7 +46,7 @@ const ProjectCard: React.FC<propsType> = ({ projectCard }) => (
     <p className="mt-3 mb-5 text-slate-200">{projectCard.description}</p>
     <ul className="flex">
       {projectCard.technologies.map((tech) => (
-        <li key={tech} className="mr-1 text-sm text-slate-200 tracking-wide">
+        <li key={tech} className="mr-2 text-sm text-slate-200 tracking-wide">
           {tech}
         </li>
       ))}

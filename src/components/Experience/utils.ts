@@ -2,13 +2,13 @@ export const workExperience = [
   {
     title: 'Full stack developer at Nection.io',
     description:
-      'Working as the lead developer at a fast-growing startup on mobile application that helps people to manage their relationships. I deal with all kinds of tasks on the frontend, backend, set up servers and help new developers to onboard on the project',
+      'Working as the lead developer at a fast-growing startup on mobile application that helps people to manage their relationships. I deal with all kinds of tasks on the frontend, backend, set up servers and help new developers to onboard on the project.',
     date: '11.2021 - present',
   },
   {
     title: 'React/Node.js developer at AVA.codes',
     description:
-      'AVA.codes is an outstaff company, so my job is to work on different projects of our clients and help them to solve their business problems in the best possible way',
+      'AVA.codes is an outstaff company, so my job is to work on different projects of our clients and help them to solve their business problems in the best possible way.',
     date: '11.2021 - present',
   },
   {
