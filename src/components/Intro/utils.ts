@@ -11,29 +11,24 @@ export const drawCanvas = (canvas: HTMLCanvasElement): void => {
   const values = ['1', '0'];
   const fontSize = 10;
 
-  const columns = canvas.width / fontSize;
-  const drops: number[] = [];
+  let columns = canvas.width / fontSize;
+  let drops: number[] = [];
   for (let x = 0; x < columns; x += 1) {
     drops[x] = 1;
   }
 
-  // window.addEventListener('resize', () => {
-  //   if (
-  //     canvas.height !== window.innerHeight ||
-  //     canvas.width !== window.innerWidth
-  //   ) {
-  //     ctx.clearRect(0, 0, canvas.width, canvas.height);
+  window.addEventListener('resize', () => {
+    if (canvas.width !== window.innerWidth) {
+      canvas.height = window.innerHeight;
+      canvas.width = window.innerWidth;
 
-  //     canvas.height = window.innerHeight;
-  //     canvas.width = window.innerWidth;
-
-  //     columns = canvas.width / fontSize;
-  //     drops = [];
-  //     for (let x = 0; x < columns; x += 1) {
-  //       drops[x] = 1;
-  //     }
-  //   }
-  // });
+      columns = canvas.width / fontSize;
+      drops = [];
+      for (let x = 0; x < columns; x += 1) {
+        drops[x] = 1;
+      }
+    }
+  });
 
   const draw = (): void => {
     ctx.fillStyle = 'rgba(17, 24, 39, 0.1)';
