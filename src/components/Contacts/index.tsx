@@ -37,7 +37,7 @@ const Contacts: React.FC = () => {
       try {
         setIsButtonDisabled(true);
 
-        fetch(process.env.CONTACT_FORM_GCF_URL!, {
+        fetch(process.env.GATSBY_CONTACT_FORM_GCF_URL!, {
           method: 'POST',
           headers: {
             Accept: 'application/json',
