@@ -14,10 +14,11 @@ const config: GatsbyConfig = {
   plugins: [
     'gatsby-plugin-postcss',
     'gatsby-plugin-dts-css-modules',
+    'gatsby-plugin-sitemap',
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Oswald\:300,400,700`],
+        fonts: [`Oswald\:400,700`],
         display: 'swap',
       },
     },

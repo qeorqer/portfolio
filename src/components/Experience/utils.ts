@@ -2,7 +2,7 @@ export const workExperience = [
   {
     title: 'Full stack developer at Nection.io',
     description:
-      'Working as the lead developer at a fast-growing startup on mobile application that helps people to manage their relationships. I deal with all kinds of tasks on the frontend, backend, set up servers and help new developers to onboard on the project.',
+      'Working as a lead developer at a fast-growing startup on mobile application that helps people to manage their relationships. I deal with all kinds of tasks on the frontend, backend, set up servers and help new developers to onboard on the project.',
     date: '11.2021 - present',
   },
   {
