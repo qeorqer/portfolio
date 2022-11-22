@@ -48,6 +48,14 @@ const config: GatsbyConfig = {
         },
       },
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.georgepustovit.dev',
+        sitemap: 'https://www.example.com/sitemap-index.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
   ],
 };
 
