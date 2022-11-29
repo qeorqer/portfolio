@@ -61,7 +61,7 @@ const config: GatsbyConfig = {
       options: {
         trackingIds: [process.env.GATSBY_GA_ID],
         pluginConfig: {
-          head: true,
+          head: false,
           respectDNT: true,
         },
       },
