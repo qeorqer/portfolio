@@ -80,6 +80,7 @@ const Header: React.FC = () => {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           type="button"
           ref={toggleRef}
+          name="menu"
         >
           <span />
           <span />
