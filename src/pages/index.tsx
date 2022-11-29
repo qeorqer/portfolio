@@ -55,4 +55,9 @@ const MainPage = () => {
 
 export default MainPage;
 
-export const Head: HeadFC = () => <title>George Pustovit</title>;
+export const Head: HeadFC = () => (
+  <>
+    <title>George Pustovit</title>
+    <meta name="description" content="Personal site of George Pustovit" />
+  </>
+);
