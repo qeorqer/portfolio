@@ -10,7 +10,6 @@ export const projects = [
     title: 'Weshare',
     description:
       'Educational web app where people can share their knowledge as well as learn something new. Created with the help of React on client side and Express.js on server side.',
-    preview: require('@assets/images/weshare.png'),
     technologies: ['React', 'Express', 'Typescript'],
     url: 'https://app.weshare.net/',
   },

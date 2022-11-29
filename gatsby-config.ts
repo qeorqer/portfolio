@@ -16,13 +16,6 @@ const config: GatsbyConfig = {
     'gatsby-plugin-dts-css-modules',
     'gatsby-plugin-sitemap',
     {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`Oswald\:400,700`],
-        display: 'swap',
-      },
-    },
-    {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
