@@ -27,7 +27,12 @@ const ProjectCard: React.FC<propsType> = ({ projectCard }) => (
       </div>
       <div className={styles.URLs}>
         {projectCard.repositoryUrl && (
-          <a href={projectCard.repositoryUrl} target="_blank" rel="noreferrer">
+          <a
+            href={projectCard.repositoryUrl}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={projectCard.repositoryUrl}
+          >
             <GithubIcon />
           </a>
         )}
