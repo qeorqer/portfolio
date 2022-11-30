@@ -56,7 +56,6 @@ const config: GatsbyConfig = {
         pluginConfig: {
           head: false,
           respectDNT: true,
-          origin: 'http://georgepustovit.dev/',
         },
       },
     },
