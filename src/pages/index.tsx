@@ -58,6 +58,10 @@ export default MainPage;
 export const Head: HeadFC = () => (
   <>
     <title>George Pustovit</title>
-    <meta name="description" content="Personal site of George Pustovit" />
+    <meta
+      name="description"
+      content="Personal site of George Pustovit, Freelance web developer. Георгий Пустовит Фриланс веб разработчик."
+    />
+    <meta name="robots" content="index, follow" />
   </>
 );
