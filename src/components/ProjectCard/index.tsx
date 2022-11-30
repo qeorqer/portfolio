@@ -32,7 +32,12 @@ const ProjectCard: React.FC<propsType> = ({ projectCard }) => (
           </a>
         )}
         {projectCard.url && (
-          <a href={projectCard.url} target="_blank" rel="noreferrer">
+          <a
+            href={projectCard.url}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={projectCard.url}
+          >
             <LinkIcon />
           </a>
         )}

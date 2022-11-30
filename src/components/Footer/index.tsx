@@ -16,6 +16,7 @@ const Footer: React.FC = () => (
           data-aos="custom-fade-down"
           data-aos-offset="-300"
           data-aos-delay={(index + 1) * 100 + 100}
+          aria-label={social.link}
         >
           <social.icon
             width={24}

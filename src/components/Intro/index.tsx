@@ -27,7 +27,7 @@ const Intro: React.FC = () => {
             className={styles.button}
             onClick={() => navigate('#about')}
             type="button"
-            name="Go to about"
+            aria-label="Go to about section"
           >
             <ArrowIcon />
           </button>
