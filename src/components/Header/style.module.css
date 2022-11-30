@@ -64,7 +64,7 @@
 
   .logo {
     opacity: 0;
-    animation: fadeDown 0.5s ease-in-out forwards 0.1s;
+    animation: fadeDown 0.5s ease-in-out forwards;
   }
 
   .nav li {
@@ -144,7 +144,7 @@
   .logo,
   .toggleButton {
     opacity: 0;
-    animation: fadeIn 0.3s ease-out forwards 0.1s;
+    animation: fadeIn 0.3s ease-out forwards;
   }
 
   .mobileMenu {
