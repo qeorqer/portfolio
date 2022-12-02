@@ -58,7 +58,7 @@ export const Head: HeadFC = () => (
     <title>George Pustovit</title>
     <meta
       name="description"
-      content="Personal site of George Pustovit, Freelance web developer. Георгий Пустовит Фриланс веб разработчик."
+      content="Personal site of George Pustovit, Freelance web developer."
     />
     <meta name="robots" content="index, follow" />
   </>
