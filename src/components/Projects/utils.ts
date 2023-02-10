@@ -2,7 +2,7 @@ export const projects = [
   {
     title: 'Nection',
     description:
-      'Nection is a personal CRM that takes networking to the next level. The app is available on both IOS and Android, highly recommend to check in out.',
+      'Nection is a personal CRM that takes networking to the next level. The app is available on both IOS and Android, highly recommend checking in out.',
     technologies: ['React Native', 'Express', 'AWS'],
     url: 'https://nection.io/',
   },
@@ -16,7 +16,7 @@ export const projects = [
   {
     title: 'Billionstracker',
     description:
-      "Haven't found the app for budget tracking I like so I created my own. Working on it in my free time, going to add PWA version in the future and, maybe even will try to attract users.",
+      "Haven't found the app for budget tracking I like so I created my own. Still working on it in my free time.",
     technologies: ['React', 'Express', 'Typescript', 'Heroku'],
     url: 'https://qeorqer.github.io/billionstraker-fe/',
     repositoryUrl: 'https://github.com/qeorqer/billionstraker-fe',
@@ -24,7 +24,7 @@ export const projects = [
   {
     title: 'Estone.pro',
     description:
-      'Created a Wordpress based site for the construction materials delivery company. Also, I was managing it  and adding some new features for a few years',
+      'Created a Wordpress based site for the construction materials delivery company. Also, I was managing it and adding some new features for a few years',
     technologies: ['Wordpress', 'PHP', 'Javascript'],
     url: 'https://estone.pro/',
   },

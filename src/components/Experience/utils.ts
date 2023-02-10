@@ -2,7 +2,7 @@ export const workExperience = [
   {
     title: 'Full stack developer at Nection.io',
     description:
-      'Working as a lead developer at a fast-growing startup on mobile application that helps people to manage their relationships. I deal with all kinds of tasks on the frontend, backend, set up servers and help new developers to onboard on the project.',
+      'Working as a lead developer at a fast-growing startup on mobile application that helps people manage their relationships. I deal with all kinds of tasks on the frontend, backend, set up servers and help new developers to onboard on the project.',
     date: '11.2021 - present',
   },
   {
@@ -14,13 +14,13 @@ export const workExperience = [
   {
     title: 'Full stack developer at DevPuzzle',
     description:
-      'Started my corporate career here, worked in a small team with talanted and more experienced developers on an ousource project for our client from Israel. My job was to create front end and back end of the educational platform.',
+      'Started my corporate career here, worked in a small team with talented and more experienced developers on an outsource project for our client from Israel. My job was to create front end and back end of the educational platform.',
     date: '06.2021 - 11.2021',
   },
   {
     title: 'Freelance developer',
     description:
-      'Worked with a large number of clients as a freelance developer. Engaged in various work on the web,  mostly dealing with tasks related to CMS(Wordpress especially), creating websites markup, writing scripts using js and php. Helped a lot of people to level up their businesses.',
+      'Worked with a large number of clients as a freelance developer. Engaged in various work on the web, mostly dealing with tasks related to CMS (Wordpress especially), creating websites, writing scripts using js, and php. Helped a lot of people to level up their businesses.',
     date: '04.2019 - 06.2021',
   },
 ];

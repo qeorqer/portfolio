@@ -10,21 +10,21 @@ const About: React.FC = () => {
           </h2>
         </div>
         <p className="text-left mt-10 max-w-xl" data-aos="fade">
-          I am a third generation developer(yep, even my grandma used to code)
-          from Ukraine with bachalor degree in computer science who is
+          I am a third generation developer (yep, even my grandma used to code)
+          from Ukraine with a bachelor degree in computer science who is
           passionate about his job. I enjoy solving business problems with the
           help of programming and, especially, I love to create the things that
-          live in the web. I positionate myself as a full stack developer who
-          can create front end, back end, deal with databases and servers.
+          live on the web. I position myself as a full stack developer who can
+          create front end, back end, deal with databases and servers.
         </p>
         <p className="text-left mt-10 max-w-xl" data-aos="fade">
-          For the years spent in this field I had a lot of different experience.
-          I worked with a bunch of small businesses as a freelance developer,
-          participated in creating of a huge learning platform, worked in
-          outsource and outstaff companies, worked in a startup where I had to
-          deal with all stages of development and much more. So I have a solid
-          understanding what the business needs from programmers, and will be
-          happy to apply my skills and knowledge in your projects.
+          For the years spent in this field I had a lot of different
+          experiences. I worked with a bunch of small businesses as a freelance
+          developer, participated in creating of a huge learning platform,
+          worked in outsource and outstaff companies, worked in a startup where
+          I had to deal with all stages of development and much more. So I have
+          a solid understanding what the business needs from programmers, and
+          will be happy to apply my skills and knowledge in your projects.
         </p>
       </div>
     </section>
