@@ -57,6 +57,24 @@
   background-color: var(--dark);
 }
 
+.resumeLink {
+  background-color: transparent;
+  background-image: linear-gradient(135deg, var(--green) 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 250%;
+  min-width: 100px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 15px 0 transparent;
+}
+
+.resumeLink:hover,
+.resumeLink:focus {
+  background-position: 0;
+  box-shadow: 0 0 15px 0 var(--green);
+  border-color: var(--white);
+}
+
 @media (min-width: 768px) {
   .nav ul {
     display: flex;
@@ -93,7 +111,7 @@
     animation-delay: 0.5s;
   }
 
-  .contactButton {
+  .resumeLink {
     animation: fadeDown 0.5s ease-in-out forwards 0.6s;
     opacity: 0;
   }
@@ -165,7 +183,7 @@
   }
 
   .mobileMenu li,
-  .mobileMenu button {
+  .mobileMenu .resumeLink {
     transform: translateY(5px);
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     transition-delay: 0.4s;
@@ -184,12 +202,12 @@
     transition-delay: 0.7s;
   }
 
-  .mobileMenu.active button {
+  .mobileMenu.active .resumeLink {
     transition-delay: 0.8s;
   }
 
   .mobileMenu.active li,
-  .mobileMenu.active button {
+  .mobileMenu.active .resumeLink {
     transform: translateY(0);
     opacity: 1;
   }

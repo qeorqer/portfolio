@@ -14,8 +14,8 @@ const Button: React.FC<propsType> = ({
   text,
   onClick,
   customStyles,
-  type,
-  disabled,
+  type = 'button',
+  disabled = false,
 }) => (
   <button
     onClick={onClick}
@@ -24,7 +24,6 @@ const Button: React.FC<propsType> = ({
     } transition-all duration-500 ease-in-out ${customStyles} ${
       disabled ? styles.disabled : ''
     }`}
-    // eslint-disable-next-line react/button-has-type
     type={type}
     disabled={disabled}
   >

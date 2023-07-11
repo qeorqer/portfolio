@@ -2,8 +2,6 @@ import { Link } from 'gatsby';
 import React, { useEffect, useRef, useState } from 'react';
 import Scrollspy from 'react-scrollspy';
 
-import Button from '@components/Button';
-
 import { menuItems } from './utils';
 import * as styles from './style.module.css';
 
@@ -27,11 +25,6 @@ const Header: React.FC = () => {
   };
 
   const handleLinkPress = (): void => {
-    setIsMenuOpen(false);
-  };
-
-  const handleContactMePress = (): void => {
-    document.location = 'mailto:gorapus@gmail.com';
     setIsMenuOpen(false);
   };
 
@@ -115,11 +108,15 @@ const Header: React.FC = () => {
             </Scrollspy>
           </nav>
           <div>
-            <Button
-              text="Contact Me"
-              onClick={handleContactMePress}
-              customStyles={styles.contactButton}
-            />
+            <a
+              href="/George_Pustovit_resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`inline-block border-emerald-500 px-4 py-1 border rounded-lg capitalize text-lg  ${styles.resumeLink} transition-all duration-500 ease-in-out`}
+              onClick={handleLinkPress}
+            >
+              Resume
+            </a>
           </div>
         </div>
       </div>
