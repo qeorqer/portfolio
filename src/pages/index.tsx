@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { FC, useEffect } from 'react';
 import type { HeadFC } from 'gatsby';
 import AOS from 'aos';
 import { Slide, ToastContainer } from 'react-toastify';
@@ -13,7 +13,7 @@ import Projects from '@components/Projects';
 import Contacts from '@components/Contacts';
 import Footer from '@components/Footer';
 
-const MainPage = () => {
+const MainPage: FC = () => {
   useEffect(() => {
     AOS.init({
       once: true,
