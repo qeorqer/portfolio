@@ -15,6 +15,7 @@ const config: GatsbyConfig = {
     'gatsby-plugin-postcss',
     'gatsby-plugin-dts-css-modules',
     'gatsby-plugin-sitemap',
+    'gatsby-plugin-netlify',
     {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
