@@ -23,7 +23,7 @@ const Projects: React.FC = () => {
         description {
           description
         }
-        technology
+        technologies
         url
         repositoryUrl
       }
