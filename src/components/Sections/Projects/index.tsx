@@ -13,7 +13,7 @@ type ProjectsSectionData = {
 const Projects: React.FC = () => {
   const data = useStaticQuery(graphql`
  query {
-  allContentfulProjectsSection {
+  allContentfulProjects {
     edges {
       node {
       sectionTitle 
@@ -32,7 +32,7 @@ const Projects: React.FC = () => {
   }
 }
   `);
-  const projectsSectionData: ProjectsSectionData = data.allContentfulProjectsSection.edges[0].node;
+  const projectsSectionData: ProjectsSectionData = data.allContentfulProjects.edges[0].node;
 
   return (
     <section className="bg-gray-900 font-light text-white text-center py-16 md:py-20 lg:py-24">
