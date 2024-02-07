@@ -1,10 +1,39 @@
-import React from 'react';
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
 
-import ProjectCard from '@components/ProjectCard';
+import ProjectCard from "@components/Sections/ProjectCard";
 
-import { projects } from './utils';
+
+type ProjectsSectionData = {
+  sectionTitle: string;
+  sectionSubtitle: string;
+  projects: Project[];
+}
 
 const Projects: React.FC = () => {
+  const data = useStaticQuery(graphql`
+ query {
+  allContentfulProjects {
+    edges {
+      node {
+      sectionTitle 
+      sectionSubtitle
+      projects {
+        title
+        description {
+          description
+        }
+        technologies
+        url
+        repositoryUrl
+      }
+      }
+    }
+  }
+}
+  `);
+  const projectsSectionData: ProjectsSectionData = data.allContentfulProjects.edges[0].node;
+
   return (
     <section className="bg-gray-900 font-light text-white text-center py-16 md:py-20 lg:py-24">
       <div
@@ -14,14 +43,14 @@ const Projects: React.FC = () => {
         <div className="text-3xl font-bold text-right mb-10">
           <h2 className="withLine right inline" data-aos="fade-up">
             <span id="projects" />
-            Projects
+            {projectsSectionData.sectionTitle}
           </h2>
         </div>
         <p className="text-2xl text-emerald-500" data-aos="fade">
-          Some things I’ve built
+          {projectsSectionData.sectionSubtitle}
         </p>
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5 text-left">
-          {projects.map((project) => (
+          {projectsSectionData.projects.map((project) => (
             <ProjectCard key={project.title} projectCard={project} />
           ))}
         </ul>

@@ -16,6 +16,7 @@ const config: GatsbyConfig = {
     'gatsby-plugin-dts-css-modules',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-netlify',
+    'gatsby-plugin-image',
     {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
@@ -66,6 +67,13 @@ const config: GatsbyConfig = {
         lang: 'en',
       },
     },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      }
+    }
   ],
 };
 

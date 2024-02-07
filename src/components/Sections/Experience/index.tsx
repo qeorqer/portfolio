@@ -4,10 +4,45 @@ import {
   VerticalTimelineElement,
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import { graphql, useStaticQuery } from "gatsby";
 
-import { workExperience } from './utils';
+
+type WorkExperience = {
+  title: string;
+  description: {
+    description: string
+  };
+    timePeriod: string;
+}
+
+type ExperienceSectionData = {
+  sectionTitle: string;
+  experiences: WorkExperience[];
+}
+
 
 const Experience: React.FC = () => {
+  const data = useStaticQuery(graphql`
+   query {
+  allContentfulExperience {
+    edges {
+      node {
+      sectionTitle
+      experiences {
+        title
+        timePeriod
+        description {
+          description
+        }
+      }
+      }
+    }
+  }
+}
+  `);
+const experienceSectionData:ExperienceSectionData = data.allContentfulExperience.edges[0].node;
+
+
   return (
     <section className="bg-gray-900 text-white text-center font-light">
       <div
@@ -16,23 +51,23 @@ const Experience: React.FC = () => {
       >
         <div className="text-3xl font-bold text-left mb-10">
           <h2 className="withLine left inline" data-aos="fade-up">
-            Experience
+            {experienceSectionData.sectionTitle}
           </h2>
         </div>
         <VerticalTimeline>
-          {workExperience.map((job) => (
+          {experienceSectionData.experiences.map((job) => (
             <VerticalTimelineElement
               contentStyle={{ background: '#10b981', color: '#fff' }}
               contentArrowStyle={{
                 borderRight: '7px solid  #10b981',
               }}
-              date={job.date}
+              date={job.timePeriod}
               dateClassName="text-center"
               iconStyle={{ background: '#10b981', color: '#fff' }}
               key={job.title}
             >
               <p className="font-bold">{job.title}</p>
-              <p>{job.description}</p>
+              <p>{job.description.description}</p>
             </VerticalTimelineElement>
           ))}
         </VerticalTimeline>

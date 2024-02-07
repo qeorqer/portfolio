@@ -1,4 +1,4 @@
-import Button from '@components/Button';
+import Button from '@components/Layout/Button';
 import { HeadFC, navigate } from 'gatsby';
 import * as React from 'react';
 

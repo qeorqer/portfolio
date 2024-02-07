@@ -1,9 +1,9 @@
 import React, { Dispatch, SetStateAction, useState } from 'react';
 import { toast } from 'react-toastify';
 
-import Button from '@components/Button';
-import Input from '@components/Input';
-import Textarea from '@components/Textarea';
+import Button from '@components/Layout/Button';
+import Input from '@components/Layout/Input';
+import Textarea from '@components/Layout/Textarea';
 
 const Contacts: React.FC = () => {
   const [name, setName] = useState('');
@@ -107,7 +107,6 @@ const Contacts: React.FC = () => {
             type="submit"
             disabled={isButtonDisabled}
           />
-          {/* <Loader /> */}
         </form>
       </div>
     </section>
