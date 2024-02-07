@@ -1,7 +1,7 @@
 type Project = {
   title: string;
   description: { description: string; };
-  technologies: string[];
+  technology: string[];
   url: string;
   repositoryUrl?: string;
 };
