@@ -5,13 +5,13 @@ import { Slide, ToastContainer } from 'react-toastify';
 import 'aos/dist/aos.css';
 import 'react-toastify/dist/ReactToastify.css';
 
-import Header from '@components/Header';
-import Intro from '@components/Intro';
-import About from '@components/About';
-import Experience from '@components/Experience';
-import Projects from '@components/Projects';
-import Contacts from '@components/Contacts';
-import Footer from '@components/Footer';
+import Header from '@components/Layout/Header';
+import Intro from '@components/Sections/Intro';
+import About from '@components/Sections/About';
+import Experience from '@components/Sections/Experience';
+import Projects from '@components/Sections/Projects';
+import Contacts from '@components/Sections/Contacts';
+import Footer from '@components/Layout/Footer';
 
 const MainPage: FC = () => {
   useEffect(() => {

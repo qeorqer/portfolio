@@ -7,13 +7,7 @@ import LinkIcon from '@assets/icons/link.svg';
 import * as styles from './style.module.css';
 
 type propsType = {
-  projectCard: {
-    title: string;
-    description: string;
-    technologies: string[];
-    url: string;
-    repositoryUrl?: string;
-  };
+  projectCard: Project
 };
 
 const ProjectCard: React.FC<propsType> = ({ projectCard }) => (
@@ -53,9 +47,9 @@ const ProjectCard: React.FC<propsType> = ({ projectCard }) => (
         {projectCard.title}
       </a>
     </h3>
-    <p className="mt-3 mb-5 text-slate-200">{projectCard.description}</p>
+    <p className="mt-3 mb-5 text-slate-200">{projectCard.description.description}</p>
     <ul className="flex">
-      {projectCard.technologies.map((tech) => (
+      {projectCard.technology.map((tech) => (
         <li key={tech} className="mr-2 text-sm text-slate-200 tracking-wide">
           {tech}
         </li>

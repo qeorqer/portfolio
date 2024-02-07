@@ -1,12 +1,24 @@
-import React, { useEffect, useRef } from 'react';
-import { navigate } from 'gatsby';
+import React, { useEffect, useRef } from "react";
+import { graphql, navigate, useStaticQuery } from "gatsby";
 
-import ArrowIcon from '@assets/icons/arrow.svg';
+import ArrowIcon from "@assets/icons/arrow.svg";
 
-import * as styles from './style.module.css';
-import { drawCanvas } from './utils';
+import * as styles from "./style.module.css";
+import { drawCanvas } from "./utils";
 
 const Intro: React.FC = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allContentfulAboutMe {
+        edges {
+          node {
+            pageTitle
+          }
+        }
+      }
+    }
+  `);
+
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -15,17 +27,18 @@ const Intro: React.FC = () => {
     }
   }, [canvasRef]);
 
+  const { pageTitle } = data.allContentfulAboutMe.edges[0].node;
+
   return (
     <section className="border-b-2 border-solid border-emerald-500 text-white text-center font-light text-2xl">
       <div className="container h-screen flex items-center justify-center flex-col">
         <p className={styles.intro}>
-          Hi, my name is George, and I am exactly the web developer you have
-          been looking for
+          {pageTitle}
         </p>
         <div>
           <button
             className={styles.button}
-            onClick={() => navigate('#about')}
+            onClick={() => navigate("#about")}
             type="button"
             aria-label="Go to about section"
           >
