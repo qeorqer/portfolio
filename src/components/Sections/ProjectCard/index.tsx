@@ -48,13 +48,15 @@ const ProjectCard: React.FC<propsType> = ({ projectCard }) => (
       </a>
     </h3>
     <p className="mt-3 mb-5 text-slate-200">{projectCard.description.description}</p>
-    <ul className="flex">
-      {projectCard.technologies.map((tech) => (
-        <li key={tech} className="mr-2 text-sm text-slate-200 tracking-wide">
-          {tech}
-        </li>
-      ))}
-    </ul>
+    {projectCard?.technologies?.length && (
+      <ul className="flex">
+        {projectCard.technologies.map((tech) => (
+          <li key={tech} className="mr-2 text-sm text-slate-200 tracking-wide">
+            {tech}
+          </li>
+        ))}
+      </ul>
+    )}
   </li>
 );
 
